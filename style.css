@@ -1,0 +1,164 @@
+/* General Page Setup */
+body {
+  margin: 0;
+  background: #f2f2f2;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Chat Container */
+.chat-container {
+  width: 400px;
+  height: 600px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Chat Header */
+.chat-header {
+  background: #0078ff;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Menu button */
+.menu-container {
+  position: relative;
+}
+
+#menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+#menu-options {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  display: none;
+  flex-direction: column;
+  z-index: 10;
+  width: 150px;
+}
+
+#menu-options.show {
+  display: flex;
+  animation: fadeIn 0.2s ease-in;
+}
+
+#menu-options button {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  text-align: left;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+
+#menu-options button:hover {
+  background-color: #f2f2f2;
+}
+
+/* Chat Box */
+.chat-box {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fafafa;
+}
+
+/* Messages */
+.user-message, .bot-message {
+  padding: 10px 15px;
+  border-radius: 15px;
+  max-width: 75%;
+  line-height: 1.4;
+  position: relative;
+}
+
+.user-message {
+  background: #0078ff;
+  color: white;
+  align-self: flex-end;
+}
+
+.bot-message {
+  background: #e5e5ea;
+  color: #333;
+  align-self: flex-start;
+}
+
+/* Timestamp - hidden by default, appears on hover */
+.timestamp {
+  font-size: 10px;
+  color: gray;
+  position: absolute;
+  bottom: -15px;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.user-message:hover .timestamp,
+.bot-message:hover .timestamp {
+  opacity: 1;
+}
+
+/* Input Section */
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+}
+
+.chat-input button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background: #0078ff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.chat-input button:hover {
+  background: #005fcc;
+}
